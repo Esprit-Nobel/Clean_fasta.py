@@ -56,7 +56,7 @@ SIZE = len(CONTENU)
 DELETED = False
 #
 for elt in CONTENU:
-    LINE = elt.rstrip("\n\r\t ") #clean the ends of lines
+    LINE = elt.strip("\n\r\t ") #clean the edges of lines
     #
     FINAL_LINE += 1 #check if that's the final line
     #
@@ -91,6 +91,7 @@ for elt in CONTENU:
         if LINE != "":
             SEQ += LINE
     del elt
+del DELETED
 #
 print ("identified sequences :", len(DICTIONARY), file=sys.stdout)
 logging.debug("identified sequences : %s", len(DICTIONARY))
