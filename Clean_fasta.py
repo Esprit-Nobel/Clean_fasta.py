@@ -18,8 +18,8 @@ import sys
 import os
 #
 import logging
-logging.basicConfig(filename='log_Clean_fasta.txt', \
-    format="%(asctime)s -- %(name)s -- %(levelname)s:%(message)s'", \
+logging.basicConfig(filename="log_Clean_fasta.txt", \
+    format="%(asctime)s -- %(name)s -- %(levelname)s:%(message)s", \
     level=logging.DEBUG)
 #
 import argparse
@@ -107,7 +107,8 @@ if ARGUMENTS.n: #check the number of sequences
             file=sys.stderr)
         print ("please try to check or modify the initial file", file=sys.stderr)
         print ("**********ERROR**********", file=sys.stderr)
-        logging.debug("-n the expected number of sequences is wrong")
+        logging.debug("-n the expected number of sequences is wrong : %s", \
+            ARGUMENTS.n)
 del HEAD, SEQ, LINE, CONTENU, SIZE, FINAL_LINE
 #end transformation
 #
